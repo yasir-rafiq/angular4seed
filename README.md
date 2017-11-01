@@ -1,3 +1,9 @@
+# Run this Starter
+1. Clone project
+2. npm install
+3. angular-cli install
+4. navigate to project folder and run ng serve
+
 # Angular4seed
 
 This project was generated with [angular-cli](https://github.com/angular/angular-cli) version 1.0.0-beta.28.3.

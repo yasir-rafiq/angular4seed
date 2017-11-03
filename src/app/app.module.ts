@@ -30,7 +30,7 @@ import {ApiService} from './services/api.service';
     BrowserModule,
     FormsModule,
     HttpModule,
-    routing
+    routing,
   ],
   providers: [RouterGuard, LocalStorageService, ApiService],
   bootstrap: [AppComponent]

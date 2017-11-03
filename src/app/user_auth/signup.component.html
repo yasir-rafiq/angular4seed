@@ -1,17 +1,20 @@
 
 
-<form>
+<form (ngSubmit)="onSignup(signupForm)" #signupForm="ngForm">
   <div class="imgcontainer">
     <img src="../../assets/images/img_avatar2.png" alt="Avatar" class="avatar">
   </div>
 
   <div class="container">
-    <label><b>Username</b></label>
-    <input type="text" placeholder="Enter Username" name="uname" required>
-    <label><b>Email</b></label>
-    <input type="email" placeholder="Enter email" name="uname" required>
+    <div ngModelGroup="userData">
+      <label><b>Username</b></label>
+      <input type="text" placeholder="Enter Username" [(ngModel)]="user.userName" name="username" required>
+      <label><b>Email</b></label>
+      <input type="email" placeholder="Enter email" [(ngModel)]="user.email"  name="email" #email="ngModel" required>
+      <div *ngIf="!email.valid">Invalid email!</div>
+    </div>
     <label><b>Password</b></label>
-    <input type="password" placeholder="Enter Password" name="psw" required>
-    <button type="submit">SignUp</button>
+    <input type="password" placeholder="Enter Password" [(ngModel)]="user.password" name="password" required>
+    <button type="submit" [disabled]="!signupForm.valid">SignUp</button>
   </div>
 </form>

@@ -1,11 +1,18 @@
 /* You can add global styles to this file, and also import other style files */
+
+body{
+  background-image: url("/assets/images/home-image-1.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.whit-color{
+  color: #fafafa !important;
+}
+
+
 li.dropdown:last-child .dropdown-menu {
   right: 0;
   left: auto;
-}
-
-form {
-  border: 3px solid #f1f1f1;
 }
 
 input[type=text], input[type=password],input[type=email]  {
@@ -65,4 +72,7 @@ span.psw {
   .cancelbtn {
     width: 100%;
   }
+}
+.padding0{
+  padding: 0px;
 }

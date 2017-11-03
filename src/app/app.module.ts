@@ -10,6 +10,10 @@ import { SignupComponent } from './user_auth/signup.component';
 import { DropdownDirective } from './directives/dropdown.directive';
 import {routing} from './app.routing';
 import { DashboardComponent } from './dashboard/dashboard.component';
+import {RouterGuard} from './app.router.guard';
+import { HomeComponent } from './home/home.component';
+import {LocalStorageService} from './services/local-storage.service';
+import {ApiService} from './services/api.service';
 
 
 @NgModule({
@@ -19,7 +23,8 @@ import { DashboardComponent } from './dashboard/dashboard.component';
     LoginComponent,
     SignupComponent,
     DropdownDirective,
-    DashboardComponent
+    DashboardComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,
@@ -27,7 +32,7 @@ import { DashboardComponent } from './dashboard/dashboard.component';
     HttpModule,
     routing
   ],
-  providers: [],
+  providers: [RouterGuard, LocalStorageService, ApiService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
